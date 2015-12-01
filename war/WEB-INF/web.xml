@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Helloworldgae</servlet-name>
+		<servlet-class>eurecom.fr.helloworldgae.HelloworldgaeServlet</servlet-class>
+	</servlet>
+	
+	<!-- HelloMoon Servlet -->
+<servlet>
+<servlet-name>Hellomoongae</servlet-name>
+<servlet-class>eurecom.fr.helloworldgae.HellomoongaeServlet</servlet-class>
+</servlet>
+
+<servlet>
+<servlet-name>SaveContact</servlet-name>
+<servlet-class>eurecom.fr.helloworldgae.SaveContactServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>SaveContact</servlet-name>
+<url-pattern>/save</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ContactList</servlet-name>
+<servlet-class>eurecom.fr.helloworldgae.ContactsListServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ContactList</servlet-name>
+<url-pattern>/contactslist</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Details</servlet-name>
+<servlet-class>eurecom.fr.helloworldgae.ContactDetailsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Details</servlet-name>
+<url-pattern>/contactdetails</url-pattern>
+</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Helloworldgae</servlet-name>
+		<url-pattern>/helloworldgae</url-pattern>
+	</servlet-mapping>
+	
+	<!-- HelloMoon pattern/servlet -->
+<servlet-mapping>
+<servlet-name>Hellomoongae</servlet-name>
+<url-pattern>/hellomoongae</url-pattern>
+</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
